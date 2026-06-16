@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<title>Our Moments ❤️</title>
+</head>
+
+<body>
+    <audio id="music" loop style="display:none;">
+    <source src="music.mp3.mp3" type="audio/mpeg">
+</audio>
+
+<h1>📸 Our Moments ❤️</h1>
+
+<img id="photo" src="photos/photo1.jpeg">
+
+<p id="caption">
+❤️ A friendship that quietly became my favorite love story.
+</p>
+
+<br>
+
+<button onclick="nextPhoto()">
+Next Memory ❤️
+</button>
+
+<script>
+
+let current = 1;
+
+const captions = [
+"",
+"❤️ A friendship that quietly became my favorite love story.",
+"❤️ Some people enter your life and make it brighter without even trying.",
+"❤️ The day my heart finally said what it had been feeling all along.",
+"❤️ One more memory I'll keep safe in my heart forever.",
+"❤️ Every picture with you holds a thousand happy memories.",
+"❤️ Just us, a smile, and a moment I never want to forget.",
+"❤️ One of my favorite days, because I spent it with you.",
+"❤️ A little more laughter, a little more love, a little more us.",
+"❤️ Collecting memories with you is my favorite thing to do.",
+"❤️ One smile from you is enough to make my whole day better."
+];
+
+function nextPhoto() {
+
+current++;
+
+if(current <= 10) {
+
+document.getElementById("photo").src =
+"photos/photo" + current + ".jpeg";
+
+document.getElementById("caption").innerHTML =
+captions[current];
+
+}
+
+else {
+
+window.location.href = "photos/iloveyou.html";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
